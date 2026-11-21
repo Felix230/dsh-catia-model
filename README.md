@@ -88,3 +88,15 @@ MIT，见 [LICENSE](LICENSE)。
 
 CATIA 是 Dassault Systèmes 的注册商标。本仓库只提供建模流程与规则，不包含也不替代 CATIA，
 使用者需要自己的 CATIA 安装与许可。
+
+## 用到的 MCP 与选型依据
+
+本 skill 的所有命令以 [rutwikg/catia-mcp](https://github.com/rutwikg/catia-mcp)（161 工具）为准。
+同类服务器还有 [daiemon12/catia-v5-mcp-server](https://github.com/daiemon12/catia-v5-mcp-server)（101 工具）。
+
+两者在同一台机器、同一个 CATIA 会话、同一套零件上的逐项实测对比——包括 pocket 静默失效、
+装配位置矩阵退化为全 0、面枚举与 Product 级质量统计的差异、以及"失败时谁更容易骗过人"——
+见 [docs/mcp-comparison.md](docs/mcp-comparison.md)。
+
+> 一句话结论：综合能力与可验证性 rutwikg 更强；纯切削特征（pocket）daiemon12 更直接。
+> 本 skill 选择 rutwikg 为主，用"环形 Pad + 多实体布尔"绕开其 pocket 缺陷。
