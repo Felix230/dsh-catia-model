@@ -1,0 +1,40 @@
+{
+  "name": "dsh-catia-model",
+  "version": "0.1.0",
+  "description": "Agent skill for modelling CATIA V5 parts from 2D drawing dimensions via rutwikg/catia-mcp: annotation-only dimensions, annulus-pad + boolean construction, mass/CoG verification, and 12 documented R21 pitfalls.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "dsh-plugin",
+    "catia",
+    "catia-v5",
+    "cad",
+    "agent-skill",
+    "mcp"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felix230/dsh-catia-model.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
