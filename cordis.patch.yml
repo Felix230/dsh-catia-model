@@ -1,0 +1,9 @@
+# dsh-catia-model bundle patch: mounts this package so its `skills/` directory
+# is discovered by the harness. The package carries no runtime code.
+#
+# Install with:  dsh plugin --profile <name> add <path-or-git-url>
+# Remove with:   dsh plugin --profile <name> remove dsh-catia-model
+
+- insert:
+    - id: catia-model-skill
+      name: 'dsh-catia-model'
